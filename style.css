@@ -1,0 +1,517 @@
+body {
+  font-family: "Poppins", "Sans-serif";
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: white; 
+  z-index: 1000; 
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar-list a,
+.navbar-list .name {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 5px 15px;
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.navbar-list .name {
+  color: rgb(223, 211, 80);
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.navbar-list a:hover {
+  color: rgb(223, 211, 80);
+  border-bottom: 2px solid rgb(223, 211, 80);
+}
+
+.about-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto; 
+  padding: 20px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.about-image {
+  width: 150px;
+  height: 150px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.right-section {
+  width: 50%;
+  padding: 100px;
+  box-sizing: border-box; 
+}
+
+.heading-text {
+  margin-bottom: 10px;
+}
+
+.heading-para {
+  font-size: 28px;
+}
+
+span {
+  color: rgb(194, 179, 21);
+}
+
+.text-top h1 {
+  color: rgb(223, 211, 80);
+  font-size: 1.9rem;
+}
+
+.text-bottom p {
+  font-size: 1.2rem;
+}
+
+.btn-custom {
+  background-color: rgb(67, 59, 59) !important;
+  color: white !important;
+}
+
+/* Responsive styles of about page*/
+@media (max-width: 1200px) {
+  .about-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-section, .left-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right-section {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    flex-direction: column;
+  }
+
+  .right-section, .left-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left-section .about-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-para {
+    font-size: 24px;
+  }
+
+  .text-top h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-bottom p {
+    font-size: 1rem;
+  }
+}
+
+/* Skill style */
+#skills-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+#skills, .skills-detail {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+.skills-detail {
+  padding-left: 150px;
+}
+
+.title-s {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+#skills span {
+  font-size: 18px;
+  color: black;
+  line-height: 3;
+}
+
+.progress-bar {
+  background-color: rgb(223, 211, 80) !important;
+}
+
+.skills-detail span {
+  font-size: 20px;
+}
+
+.skills-detail p {
+  font-size: 17px;
+}
+
+.about-info li {
+  margin-bottom: 10px;
+}
+
+.skills-heading {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.about-info li span:first-child {
+  width: 150px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+a[href*="linkedin.com"] {
+  background-color: rgb(223, 211, 80) !important;
+  color: black !important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+a[href*="linkedin.com"]:hover {
+  background-color: rgb(230, 221, 116) !important;
+}
+
+/* Responsive style of skill page */
+@media (max-width: 1200px) {
+  #skills-page {
+    flex-direction: column;
+  }
+
+  #skills, .skills-detail {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .skills-detail {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills-page {
+    flex-direction: column;
+  }
+
+  #skills, .skills-detail {
+    width: 100%;
+  }
+
+  .skills-detail {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-s {
+    font-size: 24px;
+  }
+
+  #skills span {
+    font-size: 16px;
+  }
+
+  .skills-detail span {
+    font-size: 18px;
+  }
+
+  .skills-detail p {
+    font-size: 15px;
+  }
+}
+
+/* Resume Styling */
+#resume-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-section {
+  width: 100%;
+}
+
+#resume h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h4 {
+  margin-top: 0;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.card ul li h5 {
+  margin-bottom: 5px;
+}
+
+/* Project Styling */
+#projects-page h3 {
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.project-link {
+  display: block;
+  margin: 15px 0;
+  transition: transform 0.3s;
+}
+
+.project-link:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact page styling */
+.email-button, .linkedin {
+  background-color: rgb(223, 211, 80) !important;
+  color: black !important;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-weight: normal; 
+  width: 100px;
+  height: 60px;
+  text-align: center;
+}
+
+#contact h3 {
+  font-weight: bold;
+}
+
+.email-button.bold-text {
+  font-weight: bold; 
+}
+
+.email-button:hover, .linkedin:hover {
+  background-color: rgb(230, 221, 116) !important;
+}
+
+.contact-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#contact a p {
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .navbar-list {
+    flex-direction: column;
+  }
+
+  .about-page {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-section, .left-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right-section {
+    padding-top: 0;
+  }
+
+  #skills-page {
+    flex-direction: column;
+  }
+
+  #skills, .skills-detail {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .skills-detail {
+    padding-left: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+  }
+
+  .navbar-list .name {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .about-page {
+    flex-direction: column;
+  }
+
+  .right-section, .left-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #skills-page {
+    flex-direction: column;
+  }
+
+  #skills, .skills-detail {
+    width: 100%;
+  }
+
+  .skills-detail {
+    padding-left: 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-list .name {
+    font-size: 24px;
+  }
+
+  .navbar-list a {
+    font-size: 18px;
+  }
+
+  .heading-para {
+    font-size: 24px;
+  }
+
+  .text-top h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-bottom p {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn-custom {
+    font-size: 14px;
+  }
+
+  .skills-detail span {
+    font-size: 18px;
+  }
+
+  .skills-detail p {
+    font-size: 15px;
+  }
+}
